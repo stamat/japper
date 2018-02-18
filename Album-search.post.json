@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema-api-docs.org/draft-01/schema#",
+    "endpoint": "/Album/search",
+
+    "description": "Searches for a provided album name or similar",
+    "http_method": "POST",
+    "auth": false,
+    "roles": null,
+    "headers": [
+        "Content-Type: application/json"
+    ],
+    "responses": "Album-search.post.responses.json",
+    "__comment": "http_method is not mandatory and can be interpreted from the file name,
+    it exists only if the API is not restful but RPC. only ENDPOINT keyword is mandatory,
+    endpoint can be a name of the method in RPC. Responses can also be loaded automatically.",
+    "required": ["query"],
+    "properties": {
+        "query": {
+            "type": "string",
+            "description": "Search query",
+            "minLength": 3,
+            "maxLength": 255
+        },
+        "limit": {
+            "type": "integer",
+            "description": "Number of results per page",
+            "minimum": 1,
+            "maximum": 150,
+            "default": 30
+        },
+        "page": {
+            "type": "integer",
+            "description": "Page number",
+            "minimum": 1,
+            "default": 1
+        }
+    }
+}
