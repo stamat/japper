@@ -10,15 +10,13 @@
         "Content-Type: application/json"
     ],
     "responses": "Album-search.post.responses.json",
-    "__comment": "http_method is not mandatory and can be interpreted from the file name,
-    it exists only if the API is not restful but RPC. only ENDPOINT keyword is mandatory,
-    endpoint can be a name of the method in RPC. Responses can also be loaded automatically.",
+    "__comment": "http_method is not mandatory and can be interpreted from the file name, it exists only if the API is not restful but RPC. only ENDPOINT keyword is mandatory, endpoint can be a name of the method in RPC. Responses can also be loaded automatically.",
     "required": ["query"],
     "properties": {
         "query": {
             "type": "string",
             "description": "Search query",
-            "minLength": 3,
+            "minLength": 1,
             "maxLength": 255
         },
         "limit": {

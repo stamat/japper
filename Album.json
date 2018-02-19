@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+
+    "description": "Album Model",
+
+    "required": ["title"],
+    "properties": {
+        "title": {
+            "type": "string",
+            "description": "Album Title",
+            "minLength": 1,
+            "maxLength": 255
+        },
+        "artist": {
+            "type": "object",
+            "description": "Album Artist [foregin key]",
+            "$ref": "Artist.json",
+            "__comment": "There should be a foregin key extension here..., also an ID extension as well"
+        },
+        "year": {
+            "type": "integer",
+            "description": "Album Year",
+        },
+        "genre": {
+            "enum": ["pop", "rock", "classical", "country", "rap", "lounge", "elctronic", "disco"],
+            "description": "Album genre"
+        }
+    }
+}

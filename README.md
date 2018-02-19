@@ -7,15 +7,15 @@ For the API Endpoint schema keywords we will provide a slight extension of the s
 
 Each API Docs will have to have a manifest.json file which will contain list of  schema files, title, logo, and links to MD files: Description and Installation.
 
-List of schema files can be added manually or by running an index.py script.
+List of schema files is generated through "index.py" script.
 
 There will be three definition types:
 * Endpoint schema - defines the API endpoints as we already covered
 * Model schema - data model via the regular JSON schema
 * Response schema - defines responses and examples for an endpoint
 
-## Install
-There is no installation, no hosting and no mandatory dependancies. To make your job easier it is desired for you to have Python installed.
+## Installation and Dependancies
+You'll need the Python installed to run the python packaging script "index.py"
 
 ## Run
-Right click on index.html, open with your favorite browser.
+Run "index.py" then right click on index.html, open with your favorite browser.
